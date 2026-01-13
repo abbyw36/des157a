@@ -1,4 +1,404 @@
+/* ------- RESETS ------- */
+body, h1, h2, h3, p, nav ul {
+ margin: 0;
+ padding: 0;
+}
+
+img {
+ display: block;
+ max-width: 100%;
+ height: auto;
+}
+
+nav ul {
+ list-style-type: none;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+* {
+ box-sizing: border-box;
+}
+
+
+/* ------ BASIC STYLING ------ */
 body{
+    background-color:#040F28;
+    color:#f0f8ff;
+    width:1200px;
+    height:750px;
+    margin:auto;
+
+    position:relative;
+}
+
+/* ------ BANNER ------- */
+
+header{
+    font-family: "BBH Bartle", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align:center;
+    font-size:46px;
+    color:#CCDBFF;
+    
+    background-color: #040F28;
+    width:1200px;
+    height:250px;
+    margin:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content: center;
+
+    position:relative;
+}
+
+header h1{
+    margin-top:60px;
+}
+
+header p{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:200;
+    font-style:normal;
+    letter-spacing:0.06em;
+    font-size: 24px;
+
+    margin:15px 0 20px 0;
+}
+
+hr{
+    color:#CCDBFF;
+}
+
+/* ------ MAIN ------ */
+main{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:200;
+    font-style:normal;
+    font-size:1em;
+
+    max-width:1200px;
+    height:500px;
+    width:1200px;
+    margin:auto;
+    background-image:url(images/bg-v2.svg);
+    position:relative;
+}
+
+.projects{
+    width:782px;
+    margin:auto;
+
+    display:flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+
+    position:absolute;
+    top:33px;
+    left:209px;
+}
+
+.category{
+    background-color:#4062B6;
+    width:181px;
+    height:370px;
+    border-radius:10px;
+
+    /* category flexbox*/
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+}
+
+.category nav{
+    margin:0.8em 0.8em 0 0.8em;
+}
+
+.projects ul li{
     background-color:#0A1D4B;
-    color:aliceblue;
+    margin-bottom:8px;
+    padding:0.6em;
+
+    border-radius:10px;
+}
+
+.category .instrument{
+    background-color: transparent;
+}
+    .category .instrument img{
+    margin:auto;
+    }
+
+/* category labels */
+h2{
+    font-size:1.2em;
+    text-align: center;
+    background-color:#0A1D4B;
+
+    padding:0.4em;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* ------ FOOTER ------ */
+footer{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:0.9em;
+    color:#CCDBFF;
+    text-align:end;
+
+    position:absolute;
+    right:calc(50% - 590px);
+    bottom:10px;
+}
+
+footer a{
+    color:#4062B6;
+}
+
+
+/* ------ HOVER ANIMATIONS ------ */
+.instrument img{
+    transition: all ease 200ms;
+}
+    .instrument:hover img{
+        transform:scale(1.16);
+    }
+
+.category nav ul li{
+    transition: all 500ms ease;
+}
+    .category nav ul li:not(.instrument):hover{
+        background-color: #E76900;
+        transform:scale(1.05);
+    }
+
+    
+/* ------ KEYFRAME ANIMATIONS ------ */
+
+/* studio monitors */
+.speaker-cone{
+    transition: transform 0.2s;
+    transform-origin: center;
+    animation: pulse 0.5s ease-in-out infinite;
+}
+
+@keyframes pulse{
+    0% {
+        transform: scale(1);
+    }
+
+    80% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#woofer-left{
+    position:absolute;
+    bottom:90px;
+    left:90px;
+}
+
+#woofer-right{
+    position:absolute;
+    bottom:90px;
+    right:94px;
+}
+
+#tweeter-left{
+    position:absolute;
+    bottom:190px;
+    left:106px;
+}
+
+#tweeter-right{
+    position:absolute;
+    bottom:190px;
+    right:110px;
+}
+
+/* wall sconces - LIGHT */
+.light{
+    opacity:0;
+    animation: flicker 2.8s linear forwards;
+}
+
+@keyframes flicker{
+    0%   { opacity: 0; }
+    5%   { opacity: 1; }
+    8%  { opacity: 0; }
+    15%  { opacity: 1; }
+    20%  { opacity: 0; }
+    30%  { opacity: 1; }
+    35%  { opacity: 0.6; }
+    50%  { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+#light-left{
+    position:absolute;
+    bottom:394px;
+    left:58px;
+}
+
+#light-right{
+    position:absolute;
+    bottom:392px;
+    right:70px;
+}
+
+/* audio bars */
+#bars-left{
+    position:absolute;
+    left:16px;
+    top:16px;
+}
+
+#blue-1{
+    position:absolute;
+    left:16px;
+    top:43px;
+    animation: disappear 0.8s infinite;
+}
+
+#blue-2{
+    position:absolute;
+    left:50px;
+    top:43px;
+    animation: disappear-2 0.5s ease-in-out infinite;
+}
+
+#blue-3{
+    position:absolute;
+    left:83px;
+    top:43px;
+    animation: disappear 1s infinite;
+}
+
+#blue-4{
+    position:absolute;
+    left:83px;
+    top:57px;
+    animation: disappear-2 0.5s ease-in-out infinite;
+}
+
+#orange-1{
+    position:absolute;
+    top:43px;
+    left:67px;
+    animation: disappear 1.5s infinite;
+}
+
+#orange-2{
+    position:absolute;
+    top:57px;
+    left:67px;
+    animation: disappear-2 1s ease-in-out infinite;
+}
+
+#orange-3{
+    position:absolute;
+    top:71px;
+    left:67px;
+    animation: disappear 0.5s ease-in-out infinite;
+}
+
+#orange-4{
+    position:absolute;
+    top:43px;
+    left:100px;
+    animation: disappear 0.5s ease-in-out infinite;
+}
+
+/* right bar */
+#bars-right{
+    position:absolute;
+    right:16px;
+    top:200px;
+}
+
+#blue-1a{
+    position:absolute;
+    right:100px;
+    top:186px;
+    animation: disappear 0.8s infinite;
+}
+
+#blue-2a{
+    position:absolute;
+    right:66px;
+    top:186px;
+    animation: disappear-2 0.5s ease-in-out infinite;
+}
+
+#blue-3a{
+    position:absolute;
+    right:33px;
+    top:186px;
+    animation: disappear 1s infinite;
+}
+
+#blue-4a{
+    position:absolute;
+    right:33px;
+    top:172px;
+    animation: disappear-2 0.5s ease-in-out infinite;
+}
+
+#orange-1a{
+    position:absolute;
+    top:186px;
+    right:84px;
+    animation: disappear 1.5s infinite;
+}
+
+#orange-2a{
+    position:absolute;
+    top:186px;
+    right:50px;
+    animation: disappear-2 1s ease-in-out infinite;
+}
+
+#orange-3a{
+    position:absolute;
+    top:172px;
+    right:50px;
+    animation: disappear 0.5s ease-in-out infinite;
+}
+
+#orange-4a{
+    position:absolute;
+    top:186px;
+    right:16px;
+    animation: disappear 0.5s ease-in-out infinite;
+}
+
+
+@keyframes disappear{
+    0%{
+        opacity:0%;
+    }
+
+    100%{
+        opacity:100%;
+    }
+}
+
+@keyframes disappear-2{
+    0%{
+        opacity:100%;
+    }
+
+    100%{
+        opacity:0%;
+    }
 }
