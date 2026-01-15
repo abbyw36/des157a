@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Experiment 1</title>
+</head>
+<body>
+    <h1>Experiment 1</h1>
+    <h2>Please open the console to see the code's functionality.</h2>
+    <p>Left click > inspect > console</p>
+
+    <script>
+        /*//This program creates a loop from 1-100. Any numbers divisible by 3 are replaced with "Fizz", and any numbers divisible by 5 (and not 3) are replaced with "Buzz". Any numbers divisible by both 3 and 5 are replaced with "Fizz Buzz". This is a combination of an experiment from the assignment and my own addition of Fizz Buzz.
+
+        //loop*/
+        for(var i=1; i<101; i++){
+            //selection
+            if(i % 3 == 0 && i % 5 ==0){
+                console.log(`Fizz Buzz`);
+            }
+            
+            else if(i % 3 == 0){
+                console.log(`Fizz`);
+            }
+
+            else if(i % 5 == 0){
+                console.log(`Buzz`);
+            }
+
+
+            else{
+            console.log(`${i}`);
+            }
+
+        }
+        
+    </script>
+</body>
+</html>
