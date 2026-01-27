@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 2</title>
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Bartle&display=swap" rel="stylesheet">
+
+    <!--Stylesheet-->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Experiment 2: Guess How Many Fingers I'm Holding Up!</h1>
+    </header>
+
+    <main>
+        <h2 class="computer">I am holding up ___ fingers.</h2>
+        <h2 class="user">Your Guess:</h2>
+        <h2><a href="index.html" class="verdict"></a></h2>
+    </main>
+
+    
+
+    <footer>
+        <p>Back to <a href="../index.html">Portal Page</a></p>
+    </footer>
+
+    <script>
+        //This program prompts the user to guess how many fingers the computer is holding up. The computer then chooses a random number of fingers (1-10) and tells the user if they got it right. If the user chooses more than 10 fingers or a negative number of fingers, they get an error warning.
+
+        var userGuess = prompt("How many fingers am I holding up?");
+
+        var fingers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        function game(guess){
+            var repeat;
+            if(guess == null || guess == ""){
+                repeat = "You didn't guess a number!";
+            }
+            
+            else if(guess > 10){
+                repeat = "I don't have that many fingers!";
+            }
+
+            else if(guess<0){
+                repeat = "I can't have negative fingers!";
+            }
+
+            else{
+                repeat = `Your Guess: ${guess}`;
+            }
+            
+            return repeat;
+        }
+
+        var userNum = document.querySelector(".user");
+        var userDecision = game(userGuess);
+        userNum.innerHTML = userDecision;
+        
+
+        function randomInt (min, max){
+            return Math.floor((max-min+1) * Math.random()) + min;
+        }
+
+        function computerFingers(hands){
+            var randomFingers = hands[randomInt(0, hands.length-1)];
+
+            var line1 = document.querySelector(".computer");
+
+            if (randomFingers == 1){
+                line1.innerHTML = `I am holding up ${randomFingers} finger.`;
+            }
+            
+            else{
+                line1.innerHTML = `I am holding up ${randomFingers} fingers.`;
+            }
+
+            return randomFingers;
+        }
+
+        var comp = computerFingers(fingers);
+
+        var verdict = document.querySelector(".verdict");
+        
+        if(userGuess == comp){
+            verdict.innerHTML = "Correct!";
+        }
+
+        else{
+            verdict.innerHTML = "Try again.";
+        }
+
+    </script>
+</body>
+</html>

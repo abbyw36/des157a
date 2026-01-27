@@ -1,0 +1,63 @@
+/* ------- RESETS ------- */
+body, h1, h2, h3, p{
+ margin: 0;
+ padding: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+a, a:hover, a:visited{
+    color:#b66202;
+}
+
+.verdict, .verdict:hover, .verdict:visited{
+    color:#d3e8f9;
+    text-decoration: none;
+}
+
+* {
+ box-sizing: border-box;
+}
+
+/* ------ BASIC STYLING ------ */
+body{
+    background-color:#040F28;
+    color:#f0f8ff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header, footer{
+    background-color:#0A1D4B;
+    padding:2em 2em;
+}
+
+header{
+
+    font-weight: 400;
+    font-style: normal;
+}
+
+main{
+    max-width:600px;
+    margin:8em auto;
+    text-align: center;
+}
+
+h2{
+    margin: 1em 0;
+}
+
+.verdict{
+    background-color:#143b95;
+    display:inline-block;
+    padding:0.8em;
+    border-radius: 16px;
+}
+
+footer{
+    margin-top:8em;
+}
