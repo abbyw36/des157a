@@ -52,7 +52,11 @@ main{
     min-width:400px;
     max-width:600px;
     margin:auto;
-    padding:1.2em;
+    padding:0 1.2em;
+}
+
+article{
+    padding:4em 0;
 }
 
 article h2{
@@ -99,7 +103,7 @@ footer{
         max-width:800px;
 
         margin:4em auto;
-        padding:4em 2em;
+        padding:2em 2em;
     }
 
     article{
