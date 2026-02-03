@@ -1,0 +1,166 @@
+/* ------- RESETS ------- */
+body, h1, h2, h3, p, nav ul {
+ margin: 0;
+ padding: 0;
+}
+
+img {
+ display: block;
+ max-width: 100%;
+ height: auto;
+}
+
+nav ul {
+ list-style-type: none;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+* {
+ box-sizing: border-box;
+}
+
+/* ------ BASIC STYLING ----- */
+body{
+    background-color:#261F1D;
+    color:#F2ECD5;
+
+    padding:0 1.4em;
+}
+
+h2, p, label{
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+header{
+    padding:2.2em 0;
+}
+
+header h1{
+    font-family: "Limelight", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:2.4em;
+    margin-bottom:0.4em;
+}
+
+header h1 span{
+    background-image:linear-gradient(180deg,rgba(242, 236, 213, 1) 16%, rgba(255, 200, 74, 1) 61%, rgba(116, 91, 33, 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    /* text gradient created with the help of CSS Gradient Generator and Google AI*/
+}
+
+header h2{
+    font-size:1.6em;
+    margin-bottom:0.6em;
+
+    color:#F8AD00;
+}
+
+header p{
+    font-size:1.1em;
+    line-height:1.4em;
+}
+
+.glass{
+    width:65%;
+    height:auto;
+    margin:auto;
+}
+
+/* ------ FORM STYLING ------ */
+form{
+    border-right:1px solid #F8AD00;
+}
+
+label, input{
+    display:block;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size:1.1em;
+}
+
+label{
+    margin-bottom:0.3em;
+}
+
+input{
+    border-radius:10px;
+    background-color:#F2ECD5;
+    color:#261F1D;
+
+    margin-bottom:1em;
+    width:16em;
+    height:2em;
+}
+
+#send{
+    font-family: "Limelight", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:1.4em;
+    
+    background-color:#F2ECD5;
+    color:#261F1D;
+    border-radius:15px;
+    
+    margin:3em 0;
+    width:8em;
+}
+
+@media only screen and (min-width: 1020px){
+    
+    header h1{
+        font-size:3.4em;
+        margin-bottom:0.2em;
+    }
+
+    header h2{
+        font-size:1.8em;
+    }
+
+    header p{
+        max-width:600px;
+    }
+
+    /* ------ FLEXBOXES ------ */
+    main{
+        display:flex;
+        gap:1em;
+    }
+    
+    form{
+        flex:2;
+
+        display:flex;
+        flex-direction: column;
+        border:none;
+    }
+
+    .glass{
+        flex:1;
+        margin:0;
+    }
+
+    .questions{
+        display:flex;
+        justify-content:space-between;
+    }
+    
+    input{
+        width:10em;
+    }
+
+    #send{
+        margin:0.8em auto;
+    }
+}

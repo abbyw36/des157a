@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abby's MadLib</title>
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;1,200&family=Limelight&display=swap" rel="stylesheet">
+
+    <!--Stylesheet-->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1><span>MAFIA MURDER</span><br><span>STORY GENERATOR</span></h1>
+        <h2>Agatha Christie - Venom Edition</h2>
+        <p>Need a devious murder plot to raise the stakes in your game of Mafia? Fill in the fields below to concoct a deadly deed for your next victim.</p>
+    </header>
+
+    <main>
+        <form action = "processor.php" method="POST">
+            <section class="questions">
+                <div class="column-one">
+                    <label for="one">adj.</label>
+                    <input type="text" name="one" id="one">
+
+                    <label for="two">adj.</label>
+                    <input type="text" name="two" id="two">
+
+                    <label for="three">time of day</label>
+                    <input type="text" name="three" id="three">
+
+                    <label for="four">name of victim</label>
+                    <input type="text" name="four" id="four">
+
+                    <label for="five">verb ending in -ing</label>
+                    <input type="text" name="five" id="five">
+                </div>
+
+                <div class="column-two">
+                    <label for="six">name of someone in the room</label>
+                    <input type="text" name="six" id="six">
+
+                    <label for="seven">holiday</label>
+                    <input type="text" name="seven" id="seven">
+
+                    <label for="eight">flavor</label>
+                    <input type="text" name="eight" id="eight">
+
+                    <label for="nine">noun</label>
+                    <input type="text" name="nine" id="nine">
+
+                    <label for="ten">noun</label>
+                    <input type="text" name="ten" id="ten">
+                </div>
+
+                <div class="column-three">
+                    <label for="eleven">adj.</label>
+                    <input type="text" name="eleven" id="eleven">
+
+                    <label for="twelve">body part</label>
+                    <input type="text" name="twelve" id="twelve">
+
+                    <label for="thirteen">place</label>
+                    <input type="text" name="thirteen" id="thirteen">
+
+                    <label for="fourteen">animal</label>
+                    <input type="text" name="fourteen" id="fourteen">
+
+                    <label for="fifteen">adverb</label>
+                    <input type="text" name="fifteen" id="fifteen">
+                </div>
+            </section>
+
+            <section class="submission">
+                <input type="submit" name="send" id="send" value="your story">
+            </section>
+
+        </form>
+        
+        <div class="glass">
+            <img src="images/glass.png" alt="a cocktail glass with a deadly drink" width="400">
+        </div>
+    </main>    
+    
+</body>
+</html>
