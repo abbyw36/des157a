@@ -120,6 +120,9 @@ input{
 @media only screen and (min-width: 1020px){
     body{
         padding:0 2em;
+        position:relative;
+        max-width:1200px;
+        margin:auto;
     }
     
     header h1{
@@ -154,6 +157,10 @@ input{
         margin:0;
     }
 
+        .glass img{
+            margin:auto;
+        }
+
     .questions{
         display:flex;
         justify-content:space-between;
@@ -165,5 +172,12 @@ input{
 
     #send{
         margin:0.8em auto;
+    }
+
+    /* ------ GRAPHICS ------ */
+    #hand-dropper{
+        position:absolute;
+        top:0;
+        right:220px;
     }
 }
