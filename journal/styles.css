@@ -88,6 +88,10 @@ footer{
     font-size:1.2em;
 }
 
+figcaption{
+    margin:0.8em 0 1.6em 0;
+}
+
 @media only screen and (min-width: 600px){
     main{
         margin-top:2em;
