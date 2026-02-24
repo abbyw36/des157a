@@ -51,6 +51,7 @@ h1{
 
 main{
     width: 25vw;
+    margin:0;
     padding:20px;
 }
 
