@@ -1,0 +1,206 @@
+/* ------- RESETS ------- */
+body, h1, h2, h3, ul, p {
+ margin: 0;
+ padding: 0;
+}
+
+img {
+ display: block;
+ max-width: 100%;
+ height: auto;
+}
+
+ul {
+ list-style-type: none;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+* {
+ box-sizing: border-box;
+}
+
+/* ------ BASIC STYLING ------ */
+body{
+    background-color: #040D20;
+    color: #DBE6FF;
+
+    width:1200px;
+    height:auto;
+    margin:auto;
+
+    position:relative;
+}
+
+#question{
+    position:absolute;
+    top:20px;
+    left:20px;
+    transition:all 0.1s ease;
+}
+
+#question:hover{
+    transform:scale(1.05);
+}
+
+/* ------ HEADER ------ */
+header{
+    text-align: center;
+    margin:2em 0 -0.6em 0;
+}
+
+.cursive{
+    font-family: "Ballet", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size:2.1em;
+    letter-spacing:0.2em;
+}
+
+.bbh{
+    font-family:"BBH Bartle", sans-serif;
+    font-size:2em;
+}
+
+/* ------ MAIN ------*/
+
+main{
+    display:flex;
+    gap:80px;
+    justify-content: center;
+
+    max-width:1000px;
+    margin:auto;
+
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+h2{
+    font-size:1.4em;
+    font-weight:100;
+    letter-spacing:0.4em;
+
+    text-align:center;
+    margin-bottom:1em;
+}
+
+ul li{
+    font-size:1.2em;
+}
+
+.left-side{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+/* ------ DRUMS ------ */
+.drums{
+    background-color:#122142;
+        
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr;
+    gap:30px;
+    
+
+    padding:2em;
+    aspect-ratio:1/1;
+}
+
+.drums li{
+    background-color:#B2C7F6;
+    padding:0.5em;
+    border-radius:20px;
+
+    aspect-ratio:1/1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    transition: all 0.1s ease;
+}
+
+/* ------ LOOPS ------ */
+.loops, .sample-chops{
+    color: #0A0703;
+
+    display:grid;
+    gap:20px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.loops li{
+    background-color:#FA921C;
+    
+    padding:1em 3em;
+    border-radius:10px;
+
+    transition: all 0.1s ease;
+}
+
+/* ------ SAMPLE CHOPS ------ */
+.sample-chops{
+    grid-template-rows: 1fr 1fr;
+    gap:40px;
+
+    margin-top:2em;
+}
+
+.sample-chops li{
+    background-color:#B2C7F6;
+    border-radius:20px;
+
+    aspect-ratio:1/1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    transform: rotate(45deg);
+    width:90%;
+    margin:auto;
+}
+
+.sample-chops li span{
+    transform: rotate(-45deg);
+}
+
+/* ------ FOOTER ------ */
+footer{
+    color:#96b4f5;
+    font-family:Arial, Helvetica, sans-serif;
+
+    margin-top:2em;
+    padding:1em;
+}
+
+/* ------ ANIMATIONS ------ */
+.loops li:hover, .drums li:hover{
+    transform:scale(1.05);
+}
+
+.sample-chops li:hover{
+    animation: wiggle 0.4s ease-in-out;
+}
+
+.sample-chops li:hover span{
+    animation: stay 0.4s infinite;
+}
+
+
+@keyframes wiggle {
+    0%   { transform: rotate(-45deg); }
+    25%  { transform: rotate(-51deg); }
+    50%  { transform: rotate(-39deg); }
+    75%  { transform: rotate(-49deg); }
+    100% { transform: rotate(-45deg); }
+}
+
+@keyframes stay{
+    0%{transform:rotate(45deg);}
+    100%{transform:rotate(45deg);}
+}
