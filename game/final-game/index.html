@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abby's Game v2</title>
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Ballet:opsz@16..72&display=swap" rel="stylesheet">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!--Stylesheet-->
+    <link href="styles.css" rel="stylesheet">
+
+    <!--JavaScript-->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1><span class="cursive">Build-a-</span><span class="bbh">BEAT!</span></h1>
+    </header>
+
+    <main class="dark">
+        <div class="left-side">
+            <section>
+                <h2>LOOPS</h2>
+                <ul class="loops">
+                    <li id="loop-16"><i class="fas fa-play"></i><p>1</p></li>
+                    <li id="loop-17"><i class="fas fa-play"></i>2</li>
+                    <li id="loop-18"><i class="fas fa-play"></i>3</li>
+                    <li id="loop-19"><i class="fas fa-play"></i>4</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>SAMPLE CHOPS</h2>
+                <ul class="sample-chops">
+                    <li>
+                        <div class="diamond" id="sample-10"></div>
+                        <span>Q</span>
+                    </li>
+                    <li>
+                        <div class="diamond" id="sample-11"></div>
+                        <span>W</span>
+                    </li>
+                    <li>
+                        <div class="diamond" id="sample-12"></div>
+                        <span>E</span>
+                    </li>
+                    <li>
+                        <div class="diamond" id="sample-13"></div>
+                        <span>A</span>
+                    </li>
+                    <li>
+                        <div class="diamond" id="sample-14"></div>
+                        <span>S</span>
+                    </li>
+                    <li>
+                        <div class="diamond" id="sample-15"></div>
+                        <span>D</span>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        
+        <div class="right-side">
+            <section>
+                <h2>DRUMS</h2>
+                <ul class="drums">
+                    <li><img src="images/hihat.svg" alt="hihat" id="hihat"><p class="drum-pad">I</p></li>
+                    <li><img src="images/cowbell.svg" alt="cowbell" id="cowbell"><p class="drum-pad">O</p></li>
+                    <li><img src="images/crash.svg" alt="crash cymbal" id="crash"><p class="drum-pad">P</p></li>
+                    <li><img src="images/clap.svg" alt="clap" id="clap"><p class="drum-pad">J</p></li>
+                    <li><img src="images/snare.svg" alt="snare drum" id="snare"><p class="drum-pad">K</p></li>
+                    <li><img src="images/chimes.svg" alt="chimes" id="chimes"><p class="drum-pad">L</p></li>
+                    <li><img src="images/tom.svg" alt="low tom-tom drum" id="tom"><p class="drum-pad">N</p></li>
+                    <li><img src="images/kick.svg" alt="kick drum" id="kick"><p class="drum-pad">M</p></li>
+                    <li><img src="images/pipes.svg" alt="metal pipes" id="pipe"><p class="drum-pad">,</p></li>
+                </ul>
+            </section>
+        </div>
+        
+        
+    </main>
+
+    <div class="dark">
+        <img src="images/question.svg" alt="question mark" id="question">
+    </div>
+
+    
+    
+    <div class="initialize">
+        <p>Welcome to Build-A-Beat! Please click the buttons below in order to initialize the system.</p>
+        <div>
+            <button class="start">1. Set up Audio Context</button>
+            <button class="setup-samples">2. Set Up Samples</button>
+        </div>
+    </div>
+    
+    <footer class="dark">
+        <p>Created by Abby Wong  |  <a href="sources.html">sources</a></p>
+    </footer>
+</body>
+</html>

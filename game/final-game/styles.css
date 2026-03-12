@@ -54,7 +54,6 @@ header{
 
 .cursive{
     font-family: "Ballet", cursive;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-size:2.1em;
@@ -95,7 +94,7 @@ ul li{
 .left-side{
     display:flex;
     flex-direction:column;
-    justify-content:space-between;
+    gap:50px;
 }
 
 /* ------ DRUMS ------ */
@@ -130,13 +129,22 @@ ul li{
     position:relative;
 }
 
-.number{
+.drum-pad{
     position:absolute;
-    bottom:-25px;
+    font-size:0.8em;
+    bottom:-22px;
 }
 
 /* ------ LOOPS ------ */
-.loops, .sample-chops{
+.loops{
+    color: #0A0703;
+
+    display:grid;
+    gap:20px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.sample-chops{
     color: #0A0703;
 
     display:grid;
@@ -152,6 +160,9 @@ ul li{
     border-radius:10px;
 
     transition: all 0.1s ease;
+
+    display:flex;
+    gap:20px;
 }
 
 /* ------ SAMPLE CHOPS ------ */
@@ -163,7 +174,7 @@ ul li{
 }
 
 .sample-chops li{
-    width:90%;
+    width:110%;
     margin:auto;
     position:relative;
 }
@@ -202,7 +213,7 @@ footer{
 }
 
 /* ------ ANIMATIONS ------ */
-.loops li:hover, .drums li:hover{
+.loops li:hover, .drums li:hover, .initialize button:hover, .grow{
     transform:scale(1.05);
 }
 
@@ -216,6 +227,57 @@ footer{
     50%  { transform: rotate(39deg); }
     75%  { transform: rotate(49deg); }
     100% { transform: rotate(45deg); }
+}
+
+/* AUDIO CONTEXT */
+.dark{
+    display:none;
+}
+
+.initialize{
+    position:absolute;
+    top:50vh;
+    left:50%;
+    transform:translate(-50%, -50%);
+
+    display:flex;
+    flex-direction:column;
+    gap:20px
+}
+
+.initialize div{
+    display:flex;
+    gap:20px;
+}
+
+.start, .setup-samples{
+    background-color:#B2C7F6;
+    background: linear-gradient(180deg,rgba(178, 199, 246, 1) 74%, rgba(138, 168, 234, 1) 89%, rgba(100, 142, 232, 1) 100%);
+    padding:1em;
+    border-radius:20px;
+
+    font-size:1.6em;
+    color:#040D20;
+
+    transition: all 0.1s ease;
+}
+
+.initialize p{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:1.5em;
+    letter-spacing:0.08em;
+}
+
+.green{
+    padding:1em;
+    border-radius:20px;
+
+    font-size:1.6em;
+    color:#040D20;
+
+    transition: all 0.1s ease;
+    background-color:#3eec7e;
+    background: linear-gradient(180deg,rgba(62, 236, 126, 1) 68%, rgba(72, 210, 155, 1) 86%, rgba(80, 192, 176, 1) 93%);
 }
 
 
